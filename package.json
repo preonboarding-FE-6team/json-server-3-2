@@ -1,13 +1,10 @@
 {
   "scripts": {
     "start": "node server",
-    "start:dev": "cross-env NODE_PATH=src react-scripts start",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "cross-env NODE_PATH=src npm run build"
+    "build": "npx webpack",
+    "gen": "ts-node generateData.js"
   },
   "dependencies": {
-    "cross-env": "^7.0.3",
     "json-server": "^0.17.0",
     "json-server-auth": "^2.1.0"
   },

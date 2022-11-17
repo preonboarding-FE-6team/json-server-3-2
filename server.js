@@ -7,7 +7,11 @@ const router = jsonServer.router('db.json')
 
 router.db._.id = 'uuid'
 app.db = router.db
-const rules = auth.rewriter()
+const rules = auth.rewriter({
+  users: 660,
+  userSetting: 660,
+  accounts: 660,
+})
 
 app.use(rules)
 app.use(auth)
@@ -16,5 +20,3 @@ app.use(router)
 app.listen(4000, () => {
   console.log('JSON Server is running...')
 })
-
-
