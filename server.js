@@ -17,6 +17,6 @@ app.use(rules)
 app.use(auth)
 app.use(router)
 
-app.listen(4000, () => {
+app.listen(process.env.PORT | 4000, () => {
   console.log('JSON Server is running...')
 })
