@@ -1,8 +1,6 @@
 {
   "scripts": {
-    "start": "node server",
-    "build": "npx webpack",
-    "gen": "ts-node generateData.js"
+    "start": "node server"
   },
   "dependencies": {
     "json-server": "^0.17.0",
